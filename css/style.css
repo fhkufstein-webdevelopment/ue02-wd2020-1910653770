@@ -6,6 +6,9 @@ body {
     font-size:14px;
     margin:0;
     padding:0;
+
+    margin: auto;
+    width: 990px;
 }
 
 .logo {
@@ -30,9 +33,9 @@ body {
 
 .stripe {
     background-color:#337ab7;
-    width:100%;
+    width:1519.2px;
     height:15px;
-
+    margin-left: -264.6px;
 }
 
 .logo:before {
@@ -46,11 +49,47 @@ footer {
     background-color:#f8f9fa;
     height: 150px;
     padding-top:20px;
+    padding-left: 264.6px;
+
+    width:1519.2px;
+    margin-left: -264.6px;
 }
 
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
 
+ul li {
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
 
+ul li a {
+    text-decoration: none;
+    color: blue;
+    display: block;
+    list-style-type: none;
+}
 
+ul li a:hover {
+    background-color: blue;
+    color: white;
+}
 
+ul li ul li {
+    display: none;
+}
 
+ul li:hover ul li {
+    display: block;
+}
 
+/*Das CSS File war erstaunlich kurz*/
