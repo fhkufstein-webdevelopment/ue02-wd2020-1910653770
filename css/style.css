@@ -1,5 +1,4 @@
-
-
+/*Dateiname: style.css*/
 
 body {
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -33,9 +32,9 @@ body {
 
 .stripe {
     background-color:#337ab7;
-    width:1519.2px;
+    width:1519.2px; /*Webseiten-Breite*/
     height:15px;
-    margin-left: -264.6px;
+    margin-left: -264.6px; /*an linken Rand*/
 }
 
 .logo:before {
@@ -55,13 +54,13 @@ footer {
     margin-left: -264.6px;
 }
 
-ul {
+header ul { /*soll nur ul im Header-Bereich betreffen*/
     margin: 0px;
     padding: 0px;
     list-style-type: none;
 }
 
-ul li {
+header ul li { /*soll nur ul & li im Header-Bereich betreffen*/
     float: left;
     width: 200px;
     height: 40px;
@@ -72,24 +71,28 @@ ul li {
     font-size: 20px;
 }
 
-ul li a {
+header ul li a { /*soll nur ul im Header-Bereich betreffen*/
     text-decoration: none;
     color: blue;
     display: block;
     list-style-type: none;
 }
 
-ul li a:hover {
+header ul li a:hover { /*soll nur ul im Header-Bereich betreffen*/
     background-color: blue;
     color: white;
 }
 
-ul li ul li {
+header ul li ul li { /*soll nur ul im Header-Bereich betreffen*/
     display: none;
 }
 
-ul li:hover ul li {
+header ul li:hover ul li { /*soll nur ul im Header-Bereich betreffen*/
     display: block;
 }
 
-/*Das CSS File war erstaunlich kurz*/
+h3 { /*unschöne Korrektur eines Schönheitsfehlers*/
+    color: white;
+}
+
+/*Erkenntnis: Das CSS File war erstaunlich kurz*/
