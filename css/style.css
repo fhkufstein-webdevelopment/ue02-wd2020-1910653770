@@ -1,13 +1,10 @@
-
+/*Dateiname: style.css*/
 
 body {
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:14px;
     margin:0;
     padding:0;
-
-    margin: auto;
-    width: 990px;
 }
 
 .logo {
@@ -32,13 +29,13 @@ body {
 
 .stripe {
     background-color:#337ab7;
-    width:1519.2px;
+    width:100%;
     height:15px;
-    margin-left: -264.6px;
+
 }
 
-.logo:before {
-    content:"\f155";
+.logo:before { /*sauberer wärs so: .logo::before -> aber mit :before ist es eine Garatie, dass es funzt*/
+    content:"\f155"; /*Code für Dollarzeichen*/
     font-family: "FontAwesome", sans-serif;
     display: inline-block;
     margin-right:15px;
@@ -48,47 +45,52 @@ footer {
     background-color:#f8f9fa;
     height: 150px;
     padding-top:20px;
-    padding-left: 264.6px;
-
-    width:1519.2px;
-    margin-left: -264.6px;
 }
 
-ul {
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
+/*Veränderungen der Angabe -> Beginn*/
+header > .inner, #main > .inner, footer > .inner { /*Alle direkten Nachkommen vom header, #main und footer*/
+    width: 990px;
+    margin: 0 auto;
 }
 
-ul li {
-    float: left;
-    width: 200px;
-    height: 40px;
-    background-color: white;
-    color: black;
-    line-height: 40px;
-    text-align: center;
-    font-size: 20px;
+nav ul {
+    list-style-type: none;  /*keine Aufzählungszeichen*/
+    margin: 0;              /*keine Einrückung*/
+    padding: 0;             /*keine Einrückung*/
 }
 
-ul li a {
+nav ul a {
     text-decoration: none;
-    color: blue;
-    display: block;
-    list-style-type: none;
+    color: #337ab7;
 }
 
-ul li a:hover {
-    background-color: blue;
+ul.level_2 {
+    display: none;          /*Aufzählungsinhalte mit Level 2 werden nicht angezeigt*/
+}
+
+ul.level_1 > li {
+    /*display: inline;        dann kann ich keine Außenabstände machen*/
+    display: inline-block;
+    padding-right: 25px;
+    position: relative;     /*Unterpunkte können sich nun an dem Hauptmenü ausrichten*/
+}
+
+ul.level_1 > li:hover ul.level_2{
+    display: block;         /*Elemente werden beim hover angezeigt*/
+    position: absolute;
+    left:0;
+    bottom: auto;
+    background-color: #ffffff;
+}
+/*Problem: Eingeblendetes Menü verschiebt Hauptmenüpunkt nach oben, deshalb wollen wir das Untermenü zum Hauptmenü
+relativ ausrichten.
+darum oben position: relative; bei Level_1
+und unten position: absolute; bei level_2*/
+
+ul.level_2 li:hover {
+    background-color: #337ab7;
+}
+
+ul.level_2 li:hover a {
     color: white;
 }
-
-ul li ul li {
-    display: none;
-}
-
-ul li:hover ul li {
-    display: block;
-}
-
-/*Das CSS File war erstaunlich kurz*/
